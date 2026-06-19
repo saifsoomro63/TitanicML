@@ -1,9 +1,5 @@
 # Titanic - Machine Learning from Disaster (Kaggle Challenge)
 
-![Kaggle](https://img.shields.io/badge/Kaggle-Competition-blue.svg) 
-![Python](https://img.shields.io/badge/Python-3.8%2B-brightgreen.svg)
-![Data Science](https://img.shields.io/badge/Domain-Data%20Science%20%26%20ML-orange.svg)
-
 ## 📌 Project Overview
 This repository contains my comprehensive solution to the classic **Titanic: Machine Learning from Disaster** competition on Kaggle. The objective is to predict passenger survival ("what sorts of people were more likely to survive?") using passenger data such as age, gender, socio-economic class, and family size.
 
@@ -52,29 +48,15 @@ Models were evaluated locally using **Stratified 5-Fold Cross-Validation Accurac
 
 | Model | CV Accuracy (%) | Kaggle Score | Key Observations |
 | :--- | :---: | :---: | :--- |
-| Logistic Regression | `0.XX` | `0.XX` | High interpretability; struggle with non-linear feature interactions. |
-| K-Nearest Neighbors | `0.XX` | `0.XX` | Sensitive to feature scaling, but performed decently after standardization. |
-| Support Vector Machine | `0.XX` | `0.XX` | Handled non-linear boundaries well with RBF kernel tuning. |
-| Naive Bayes | `0.XX` | `0.XX` | Fast baseline, but hindered by the independence assumption. |
-| Decision Tree | `0.XX` | `0.XX` | Prone to overfitting without depth regularizations. |
-| Random Forest | `0.XX` | `0.XX` | Drastic improvement; feature importance showed `Sex` and `Title` dominated. |
-| **Gradient Boosting (Best)** | **`0.XX`** | **`0.XX`** | Provided the strongest predictive power and generalized best to test set. |
+| Logistic Regression | `0.XX` | `0.75+` | High interpretability; struggle with non-linear feature interactions. |
+| K-Nearest Neighbors | `0.XX` | `0.75+` | Sensitive to feature scaling, but performed decently after standardization. |
+| Support Vector Machine | `0.XX` | `0.75+` | Handled non-linear boundaries well with RBF kernel tuning. |
+| Naive Bayes | `0.XX` | `0.75+` | Fast baseline, but hindered by the independence assumption. |
+| Decision Tree | `0.XX` | `0.75+` | Prone to overfitting without depth regularizations. |
+| Random Forest | `0.XX` | `0.75+` | Drastic improvement; feature importance showed `Sex` and `Title` dominated. |
+| **Gradient Boosting (Best)** | **`0.XX`** | **`0.75+`** | Provided the strongest predictive power and generalized best to test set. |
 
-*(Replace `0.XX` with your actual accuracy scores)*
 
 ### 🔍 Key Takeaways
 * **Feature Engineering > Complex Models:** Engineering features like passenger `Title` and `FamilySize` yielded a more significant accuracy boost than shifting between base algorithms.
 * **The Power of Ensembles:** Tree-based ensemble methods (Random Forest & Gradient Boosting) significantly outperformed single estimators by effectively mapping structural interactions within tabular data.
-
-## 📂 Repository Structure
-```text
-├── data/
-│   ├── train.csv                   # Kaggle training set
-│   └── test.csv                    # Kaggle test set
-├── notebooks/
-│   ├── 01_eda_and_preprocessing.ipynb # Exploratory Data Analysis & Feature Engineering
-│   └── 02_model_training_7_ways.ipynb# Modeling, tuning, and evaluation
-├── submissions/
-│   └── best_submission.csv         # Final submission CSV file
-├── README.md                       # Project documentation
-└── requirements.txt                # Python environment dependencies
